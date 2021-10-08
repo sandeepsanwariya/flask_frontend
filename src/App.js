@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './app.css'
+import Dashboard from './components/dashboard/Dashboard'
+import Employes from './components/employ/Employes.js'
+import Notification from './components/notifications/Notification'
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
+  import Charts from './components/chart/Chart';
+export default function App() {
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (<>
+
+<div className='app' style={{backgroundImage:`url(${process.env.PUBLIC_URL + '/images/grid.png'}),radial-gradient(98.31% 98.31% at 50.03% 103.64%, rgb(119 119 119 / 48%) 0%, rgb(16 19 27) 100%)`}}> 
+
+       
+           <Switch>
+              <Route path="/" component={Dashboard} exact />
+                <Route path="/notification" component={Notification}/>
+                <Route path="/employe" component={Employes} />
+                <Route path="/chart" component={Charts} />
+            </Switch>
+        </div>
+    </>
+       
+    )
 }
-
-export default App;

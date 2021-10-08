@@ -1,38 +1,52 @@
-.App {
-  text-align: center;
-}
+.app{
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    width:100%;
+    height:100vh;
+    overflow-y:scroll;
+  
+    transition: transform 5s;
+    
+    background-position: top left;
+    z-index:-100;
+    animation-name: example;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+    
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+::-webkit-scrollbar {
+    width: 1px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
   }
-  to {
-    transform: rotate(360deg);
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: rgb(78, 78, 78); 
   }
-}
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgb(153, 153, 153); 
+  }
+@keyframes example {
+   
+    50% {background-position: center;}
+    5%{background-blend-mode:screen 0.3;}
+    15%{background-blend-mode:screen 0.6;}
+    25%{background-blend-mode:screen ;}
+    35%{background-blend-mode:hard-light 0.3;}
+    45%{background-blend-mode:hard-light 0.6;}
+    55%{background-blend-mode:hard-light ;}
+    65%{background-blend-mode:screen;}
+    75%{background-blend-mode:screen 0.1;}
+    85%{background-blend-mode:screen;}
+    95%{background-blend-mode:screen 0.3;}
+    100%{background-blend-mode:screen 0.6;}
+
+
+
+
+  }

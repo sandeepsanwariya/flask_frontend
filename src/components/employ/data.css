@@ -1,0 +1,8 @@
+.employ_card{
+    width:80vw;
+    /* overflow-y:scroll; */
+    display: flex;
+    flex-wrap: wrap;  
+    flex-direction: row;
+    /* height:78vh; */
+}

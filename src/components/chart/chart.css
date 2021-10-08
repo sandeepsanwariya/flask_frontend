@@ -1,0 +1,32 @@
+.linechart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  
+        
+}
+.linechart_head{
+    width: 60%;
+    height:50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight:900;
+    font-size:45px;
+    color: rgb(216, 216, 216);
+    margin-top:2%;
+    margin-bottom:2%;
+}
+.linechart_chart{
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -14px 2px 18px 3px rgb(0 0 0);
+    color: white;
+
+}
+
