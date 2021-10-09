@@ -10,6 +10,7 @@ import {
     Link
   } from "react-router-dom";
   import Charts from './components/chart/Chart';
+  import Login from './components/login/Login'
 export default function App() {
 
     return (<>
@@ -22,6 +23,7 @@ export default function App() {
                 <Route path="/notification" component={Notification}/>
                 <Route path="/employe" component={Employes} />
                 <Route path="/chart" component={Charts} />
+                <Route path="/login" component={Login} />
             </Switch>
         </div>
     </>

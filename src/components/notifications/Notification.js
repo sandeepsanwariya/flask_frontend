@@ -1,20 +1,22 @@
 import React from 'react'
 import './notification.css'
 import { Icon } from '@iconify/react';
+import { useHistory } from 'react-router'
 export default function Notification() {
  var dt = new Date();
+ let  history= useHistory()
 // document.getElementById('time').innerHTML=dt;
     return (
         <div className='notification'>
             <div className='notification_head'>
-                <div>
+                <div onClick={()=>history.push('/')}>
                     HOME
                 </div>
-                <div>
+                <div onClick={()=>history.push('/chart')}>
                     Chart
                 </div>
-                <div>
-                    Login
+                <div onClick={()=>history.push('/employe')}>
+                    Employes
                 </div>
             </div>
             <div className='running_notification'>

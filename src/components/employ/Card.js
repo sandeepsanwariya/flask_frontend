@@ -16,15 +16,15 @@ export default function Card(props) {
                  >
                     <div className='card_left_side'>
                         <div className='card_left_side_option1'>
-                            115 Avarage UPH
+                        {props.person.uph} Avarage UPH
                             <hr/>
                         </div>
                         <div className='card_left_side_option2'>
-                            51 Quality
+                        {props.person.quality} Quality
                             <hr/>
                         </div>
                         <div className='card_left_side_option3'>
-                            opt
+                        {props.person.ws}
                             <hr/>
                         </div>
                     </div>
